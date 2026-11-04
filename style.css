@@ -10,6 +10,30 @@ body {
   overflow-x: hidden;
 }
 
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 10%;
+  background: #05131d;
+}
+
+.logo {
+  color: #00abf0;
+  font-size: 25px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 25px;
+  font-size: 16px;
+}
+
+nav a:hover {
+  color: #00abf0;
+}
+
 .home {
   min-height: 90vh;
   display: flex;
@@ -111,10 +135,35 @@ span {
   margin: 15px;
 }
 
-/* Footer */
 footer {
   text-align: center;
   padding: 20px;
   background: #05131d;
   color: #aaa;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav a {
+        margin: 5px;
+        font-size: 14px;
+    }
+
+    .home {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .home-text h1 {
+        font-size: 30px;
+    }
+
+    .profile img {
+        width: 200px;
+        height: 200px;
+    }
 }
