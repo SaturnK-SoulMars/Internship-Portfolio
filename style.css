@@ -538,26 +538,117 @@ span {
   align-items: center;
 }
 
-#contact-form {
+.contact-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
   width: 100%;
-  max-width: 550px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+  max-width: 1000px;
+  align-items: start;
 }
 
-#contact-form label {
-  font-size: 0.9rem;
-  font-weight: 600;
+/* Contact Information */
+
+.contact-info h3,
+#contact-form h3 {
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+}
+
+.contact-description {
+  max-width: 420px;
+  margin-bottom: 30px;
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+/* Social Links */
+
+.social-links {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 16px;
+  border: 1px solid rgba(128, 128, 128, 0.2);
+  border-radius: var(--radius);
+  background: var(--card);
+  transition:
+    transform var(--transition),
+    border-color var(--transition);
+}
+
+.social-link:hover {
+  transform: translateX(6px);
+  border-color: var(--accent);
+}
+
+.social-icon {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 45px;
+  height: 45px;
+  border-radius: 12px;
+  background: var(--bg);
+  color: var(--accent);
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.social-link > span:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  flex: 1;
+  min-width: 0;
+}
+
+.social-link strong {
+  color: var(--text);
+  font-size: 1rem;
+}
+
+.social-link small {
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
+.social-arrow {
+  color: var(--accent);
+  font-size: 1.3rem;
+}
+
+.resume-btn {
+  margin-top: 25px;
+}
+
+/* Contact Form */
+
+#contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  max-width: none;
+  padding: 28px;
+  border: 1px solid rgba(128, 128, 128, 0.2);
+  border-radius: var(--radius);
+  background: var(--card);
 }
 
 #contact-form input,
 #contact-form textarea {
   width: 100%;
   padding: 14px;
-  border: 1px solid var(--muted);
+  border: 1px solid rgba(128, 128, 128, 0.35);
   border-radius: 8px;
-  background: var(--card);
+  background: var(--bg);
   color: var(--text);
   outline: none;
   transition: border-color var(--transition);
@@ -669,6 +760,19 @@ span {
   .card {
     grid-template-columns: 1fr 0.8fr;
   }
+
+  .contact-container {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .contact-info {
+    width: 100%;
+  }
+
+  #contact-form {
+    padding: 22px;
+  }
 }
 
 @media (max-width: 550px) {
@@ -744,6 +848,20 @@ span {
 
   .education-timeline::before {
     left: 22px;
+  }
+
+  .social-link {
+    padding: 13px;
+  }
+
+  .contact-container {
+    gap: 30px;
+  }
+
+  #contact-form .btn,
+  .resume-btn {
+    width: 100%;
+    text-align: center;
   }
 
   #scroll-top {
