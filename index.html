@@ -4,102 +4,267 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Portfolio</title>
+
+  <meta name="description" content="Krishna Sharma's personal web development portfolio.">
+
+  <title>Krishna Sharma | Portfolio</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap"
+    rel="stylesheet">
+
   <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 
 <body>
 
-  <header>
-    <h2 class="logo">MyPortfolio</h2>
+  <header class="header">
+    <a href="#home" class="logo">MyPortfolio</a>
 
-    <nav id="navbar">
+    <nav class="navbar" id="navbar" aria-label="Main navigation">
       <a href="#home">Home</a>
+      <a href="#projects">Projects</a>
       <a href="#about">About</a>
       <a href="#skills">Skills</a>
       <a href="#contact">Contact</a>
     </nav>
 
     <div class="header-buttons">
-      <button id="theme-toggle" aria-label="Toggle dark and light mode">☀️</button>
-      <button id="menu-toggle" aria-label="Open navigation menu">☰</button>
+      <button id="theme-toggle" aria-label="Switch color theme" type="button">☀️</button>
+      <button id="menu-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="navbar"
+        type="button">☰</button>
     </div>
   </header>
 
-  <section id="home" class="home reveal">
-    <div class="home-text">
-      <h1>Hello, I'm <span>Krishna Sharma</span></h1>
-      <h2>I'm a Web Developer</h2>
-      <p>Welcome to my personal portfolio website.
-        I love learning new technologies and creating websites.</p>
-      <a href="#contact" class="btn">Contact Me</a>
-    </div>
+  <main>
 
-    <div class="profile">
-      <img src="profile.jpg" alt="My Profile Picture">
-    </div>
-  </section>
+    <section id="home" class="home section reveal">
+      <div class="home-text">
+        <p class="eyebrow">WELCOME TO MY PORTFOLIO</p>
 
-  <section id="about" class="about reveal">
-    <h1>About <span>Me</span></h1>
-    <p>
-      Hello! My name is Your Name. I am a student who is
-      passionate about web development and technology.
-      I enjoy learning HTML, CSS and programming.
-      My goal is to become a professional web developer.
-    </p>
-  </section>
+        <h1>Hello, I'm <span>Krishna Sharma</span></h1>
+        <h2>I'm a Web Developer</h2>
 
-  <section id="skills" class="skills reveal">
-    <h1>My <span>Skills</span></h1>
+        <p>
+          Welcome to my personal portfolio website.
+          I love learning new technologies and creating websites.
+        </p>
 
-    <div class="skill-box">
-      <div class="skill">
-        <h3>HTML</h3>
-        <p>90%</p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn">Contact Me</a>
+
+          <a href="resume.pdf" class="btn btn-outline" download>
+            <span aria-hidden="true">↓</span>
+            Download Resume
+          </a>
+        </div>
+
       </div>
 
-      <div class="skill">
-        <h3>CSS</h3>
-        <p>80%</p>
+      <div class="profile">
+        <img src="profile.jpg" alt="Krishna Sharma's profile picture">
+      </div>
+    </section>
+
+    
+    <section id="projects" class="projects section reveal">
+      <div class="section-heading">
+        <p class="eyebrow">WHAT I'VE CREATED</p>
+        <h2>My <span>Projects</span></h2>
       </div>
 
-      <div class="skill">
-        <h3>JavaScript</h3>
-        <p>60%</p>
+      <div class="project-grid">
+
+        <article class="card" data-tone="1">
+          <div class="card-content">
+            <h3 class="card-title">Telescope</h3>
+            <p class="card-description">
+              Telescope is a new kind of platform built for those who still believe the internet should inspire
+            </p>
+            <a href="#contact" class="card-cta">
+              Discover more <span aria-hidden="true">→</span>
+            </a>
+          </div>
+
+          <div class="card-media">
+            <img
+              src="https://cdn.telescope.fyi/landing/discover/back.webp"
+              alt="Editorial fashion photography" loading="lazy">
+          </div>
+        </article>
+
+        <article class="card" data-tone="2">
+          <div class="card-content">
+            <h3 class="card-title">Zentry Landing Page</h3>
+            <p class="card-description">
+              Zentry is a human-agentic operating system and gaming superlayer that merges AI, blockchain, and decentralized finance (DeFi) into a unified ecosystem
+            </p>
+            <a href="#contact" class="card-cta">
+              Discover more <span aria-hidden="true">→</span>
+            </a>
+          </div>
+
+          <div class="card-media">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvAqvk8lrrSqC-yMZy609kvfFy_BSWEUlLwCKAlINDxPdcR6lr1Wo08Ho&s=10"
+              alt="Athletic lifestyle photography" loading="lazy">
+          </div>
+        </article>
+
+        <article class="card" data-tone="3">
+          <div class="card-content">
+            <h3 class="card-title">Spylt</h3>
+            <p class="card-description">
+              SPYLT is a brand of high-protein, caffeinated, and zero-sugar flavored milk drinks
+            </p>
+            <a href="#contact" class="card-cta">
+              Discover more <span aria-hidden="true">→</span>
+            </a>
+          </div>
+
+          <div class="card-media">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpO_yjFTIFHnOAbyk5Zzcau28gtmN52_uZG-3uBDxlGxvdEfOI_zE7Eumo&s=10"
+              alt="Minimal interior design" loading="lazy">
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <section id="about" class="about section reveal">
+      <div class="section-heading">
+        <p class="eyebrow">GET TO KNOW ME</p>
+        <h2>About <span>Me</span></h2>
       </div>
 
-      <div class="skill">
-        <h3>Communication</h3>
-        <p>85%</p>
+      <p>
+        Hello! My name is Krishna Sharma. I am a student passionate
+        about web development and technology. I enjoy learning HTML,
+        CSS and programming. My goal is to become a professional
+        web developer.
+      </p>
+    </section>
+
+    <section id="education" class="education section reveal">
+
+      <div class="section-heading">
+        <p class="eyebrow">MY ACADEMIC BACKGROUND</p>
+        <h2>My <span>Education</span></h2>
+        <p class="section-subtitle">
+          My learning journey and academic achievements.
+        </p>
       </div>
-    </div>
-  </section>
 
-  <section id="contact" class="reveal contact">
-    <h1>Contact <span>Me</span></h1>
+      <div class="education-timeline">
 
-    <form id="contact-form">
-      <input type="text" id="name" placeholder="Your Name" required>
+        <article class="education-card">
+          <div class="education-icon">🎓</div>
 
-      <input type="email" id="email" placeholder="Your Email" required>
+          <div class="education-content">
+            <span class="education-date">2023 – Present</span>
+            <h3>Electrical and Electronics Engineering / B.Tech</h3>
+            
+            <p>
+              Currently pursuing my studies and developing
+              my knowledge in technology and programming.
+            </p>
+          </div>
+        </article>
 
-      <textarea id="message" placeholder="Your Message" required></textarea>
+        <article class="education-card">
+          <div class="education-icon">📚</div>
 
-      <button type="submit" class="btn">
-        Send Message
-      </button>
+          <div class="education-content">
+            <span class="education-date">2021 – 2023</span>
+            <h3>Higher Secondary Education</h3>
+            
+            <p>
+              Completed higher secondary education while
+              building an interest in computers and technology.
+            </p>
+          </div>
+        </article>
 
-      <p id="form-status" role="status" aria-live="polite"></p>
-    </form>
-  </section>
+        <article class="education-card">
+          <div class="education-icon">✏️</div>
 
-  <footer>
-    <p>© 2026 | All Rights Reserved</p>
+          <div class="education-content">
+            <span class="education-date">2015 – 2017</span>
+            <h3>Secondary Education</h3>
+            
+            <p>
+              Developed my academic foundation and interest
+              in learning new skills.
+            </p>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+
+    <section id="skills" class="skills section reveal">
+      <div class="section-heading">
+        <p class="eyebrow">WHAT I BRING</p>
+        <h2>My <span>Skills</span></h2>
+      </div>
+
+      <div class="skill-grid">
+        <article class="skill">
+          <h3>HTML</h3>
+          <p>90%</p>
+        </article>
+
+        <article class="skill">
+          <h3>CSS</h3>
+          <p>80%</p>
+        </article>
+
+        <article class="skill">
+          <h3>JavaScript</h3>
+          <p>60%</p>
+        </article>
+
+        <article class="skill">
+          <h3>Communication</h3>
+          <p>85%</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="contact section reveal">
+      <div class="section-heading">
+        <p class="eyebrow">LET'S CONNECT</p>
+        <h2>Contact <span>Me</span></h2>
+      </div>
+
+      <form id="contact-form">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+        <label for="email">Your Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+        <label for="message">Your Message</label>
+        <textarea id="message" name="message" placeholder="Write your message..." required></textarea>
+
+        <button type="submit" class="btn">Send Message</button>
+
+        <p id="form-status" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 Krishna Sharma | All Rights Reserved</p>
   </footer>
 
-  <script src="https://unpkg.com/lenis@1.3.11/dist/lenis.min.js"></script>
-  <script src="script.js"></script>
 </body>
 
 </html>
